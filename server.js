@@ -109,8 +109,17 @@ async function findAvailablePort(startPort, maxAttempts = 10) {
   try {
     const port = await findAvailablePort(DEFAULT_PORT);
     app.listen(port, () => {
+      // For normal usage, keep these logs
       console.log(`Server running on port ${port}`);
       console.log(`Visit http://localhost:${port} to access the application`);
+
+      // For Claude Desktop integration, output valid JSON to stderr
+      // Claude Desktop can be configured to capture stderr for JSON output
+      console.error(JSON.stringify({
+        status: "running",
+        port: port,
+        url: `http://localhost:${port}`
+      }));
     });
   } catch (error) {
     console.error('Failed to start server:', error);

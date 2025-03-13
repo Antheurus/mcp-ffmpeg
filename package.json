@@ -1,6 +1,6 @@
 {
 	"name": "mcp-ffmpeg",
-	"version": "1.0.1",
+	"version": "1.0.2",
 	"description": "MCP server for FFmpeg video manipulation",
 	"main": "server.js",
 	"bin": {
