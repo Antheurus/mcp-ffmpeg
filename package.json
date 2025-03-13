@@ -4,6 +4,9 @@
 	"description": "A basic Model Context Protocol implementation for Node.js",
 	"main": "dist/mcp-ffmpeg.js",
 	"type": "module",
+	"bin": {
+		"mcp-ffmpeg": "./dist/mcp-ffmpeg.js"
+	},
 	"scripts": {
 		"build": "tsc",
 		"lint": "eslint .",
