@@ -1,10 +1,10 @@
 {
 	"name": "mcp-ffmpeg",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "MCP server for FFmpeg video manipulation",
 	"main": "server.js",
 	"bin": {
-	  "mcp-ffmpeg": "./bin/mcp-ffmpeg.js"
+	  "mcp-ffmpeg": "./bin/mcp-server.js"
 	},
 	"scripts": {
 	  "start": "node server.js",
