@@ -108,6 +108,75 @@ mcp-ffmpeg/
 └── README.md
 ```
 
+## Using with Claude Desktop
+
+This MCP FFmpeg server can be integrated with Claude Desktop to process videos through natural language requests.
+
+### Running with npx
+
+You can run the server directly with npx:
+
+```bash
+npx /path/to/mcp-ffmpeg
+```
+
+Or if you've published the package to npm:
+
+```bash
+npx mcp-ffmpeg
+```
+
+### Configuring Claude Desktop
+
+To add this server to Claude Desktop, update your Claude Desktop configuration file:
+
+1. Locate your Claude Desktop config file:
+   - macOS: `~/.config/claude-desktop/config.json` or `~/Library/Application Support/Claude Desktop/config.json`
+   - Windows: `%APPDATA%\Claude Desktop\config.json`
+   - Linux: `~/.config/claude-desktop/config.json`
+
+2. Add the FFmpeg MCP server to the `mcpServers` section:
+
+```json
+{
+    "mcpServers": {
+        "ffmpeg": {
+            "command": "npx",
+            "args": [
+                "--yes",
+                "/absolute/path/to/mcp-ffmpeg"
+            ]
+        }
+    }
+}
+```
+
+If you've published the package to npm:
+
+```json
+{
+    "mcpServers": {
+        "ffmpeg": {
+            "command": "npx",
+            "args": [
+                "--yes",
+                "mcp-ffmpeg"
+            ]
+        }
+    }
+}
+```
+
+3. Restart Claude Desktop for the changes to take effect.
+
+### Example Prompts for Claude
+
+Once configured, you can use prompts like:
+
+```
+Using the ffmpeg MCP server, please resize the video at /path/to/video.mp4 to 720p resolution.
+```
+
 ## Notes
 
 - Uploaded videos are stored temporarily in the `uploads` directory
