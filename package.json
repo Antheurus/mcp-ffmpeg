@@ -1,23 +1,51 @@
 {
 	"name": "mcp-ffmpeg",
-	"version": "1.0.2",
-	"description": "MCP server for FFmpeg video manipulation",
-	"main": "server.js",
-	"bin": {
-	  "mcp-ffmpeg": "./bin/mcp-server.js"
-	},
+	"version": "1.0.3",
+	"description": "A basic Model Context Protocol implementation for Node.js",
+	"main": "dist/mcp-ffmpeg.js",
+	"type": "module",
 	"scripts": {
-	  "start": "node server.js",
-	  "dev": "nodemon server.js"
+		"build": "tsc",
+		"lint": "eslint .",
+		"lint:fix": "eslint --fix .",
+		"dev": "npm run build && npx @modelcontextprotocol/inspector node dist/mcp-node.js"
 	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/platformatic/mcp-node.git"
+	},
+	"license": "MIT",
+	"author": "Platformatic Inc. <oss@platformatic.dev> (https://platformatic.dev)",
+	"contributors": [
+		{
+			"name": "Alexandr Korsak",
+			"email": "alex@bitscorp.co"
+		}
+	],
+	"bugs": {
+		"url": "https://github.com/bitscorp-mcp/mcp-ffmpeg/issues"
+	},
+	"homepage": "https://github.com/bitscorp-mcp/mcp-ffmpeg#readme",
 	"dependencies": {
-	  "express": "^4.18.2",
-	  "fluent-ffmpeg": "^2.1.2",
-	  "multer": "^1.4.5-lts.1",
-	  "cors": "^2.8.5",
-	  "morgan": "^1.10.0"
+		"@modelcontextprotocol/sdk": "^1.6.0",
+		"node-notifier": "^10.0.1",
+		"zod": "^3.24.2"
 	},
 	"devDependencies": {
-	  "nodemon": "^3.0.1"
+		"@types/node": "^22.13.5",
+		"@types/node-notifier": "^8.0.5",
+		"eslint": "^9.21.0",
+		"neostandard": "^0.12.1",
+		"typescript": "^5.7.3"
+	},
+	"keywords": [
+		"mcp",
+		"model-context-protocol",
+		"ai",
+		"nodejs",
+		"javascript-runtime"
+	],
+	"engines": {
+		"node": ">=22.0.0"
 	}
-  }
+}

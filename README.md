@@ -57,57 +57,6 @@ For development with auto-restart on file changes:
 npm run dev
 ```
 
-The server will start on port 3000 by default. You can access the web interface at:
-
-```
-http://localhost:3000
-```
-
-## API Endpoints
-
-### Resize Video
-
-**Endpoint:** `POST /api/resize`
-
-**Form Data:**
-- `video`: The video file to resize
-- `resolutions`: (Optional) JSON array of resolutions to generate. Default: all resolutions.
-  - Available options: `360p`, `480p`, `720p`, `1080p`
-
-**Example using curl:**
-```bash
-curl -X POST -F "video=@path/to/video.mp4" -F "resolutions=[\"360p\",\"720p\"]" http://localhost:3000/api/resize
-```
-
-### Extract Audio
-
-**Endpoint:** `POST /api/extract-audio`
-
-**Form Data:**
-- `video`: The video file to extract audio from
-- `format`: (Optional) Audio format. Default: `mp3`
-  - Available options: `mp3`, `aac`, `wav`, `ogg`
-
-**Example using curl:**
-```bash
-curl -X POST -F "video=@path/to/video.mp4" -F "format=mp3" http://localhost:3000/api/extract-audio
-```
-
-## Project Structure
-
-```
-mcp-ffmpeg/
-├── controllers/
-│   └── ffmpegController.js  # FFmpeg processing logic
-├── public/
-│   └── index.html           # Web interface
-├── uploads/                 # Temporary storage for uploaded files
-├── output/                  # Output directory for processed files
-├── server.js                # Main server file
-├── package.json
-└── README.md
-```
-
 ## Using with Claude Desktop
 
 This MCP FFmpeg server can be integrated with Claude Desktop to process videos through natural language requests.
