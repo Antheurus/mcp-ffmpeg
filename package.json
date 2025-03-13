@@ -1,6 +1,6 @@
 {
 	"name": "mcp-ffmpeg",
-	"version": "1.0.3",
+	"version": "1.0.4",
 	"description": "A basic Model Context Protocol implementation for Node.js",
 	"main": "dist/mcp-ffmpeg.js",
 	"type": "module",
