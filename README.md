@@ -35,7 +35,7 @@ sudo apt install ffmpeg
 
 1. Clone this repository:
 ```bash
-git clone https://github.com/yourusername/mcp-ffmpeg.git
+git clone https://github.com/bitscorp-mcp/mcp-ffmpeg.git
 cd mcp-ffmpeg
 ```
 
@@ -56,6 +56,21 @@ For development with auto-restart on file changes:
 
 ```bash
 npm run dev
+```
+
+### Installing via Smithery
+
+To install mcp-ffmpeg for Claude Desktop automatically via [Smithery](https://smithery.ai/server/bitscorp-mcp/mcp-ffmpeg):
+
+```bash
+npx -y @smithery/cli install @bitscorp-mcp/mcp-ffmpeg --client claude
+```
+
+To install mcp-ffmpeg for Cursor, go to Settings -> Cursor Settings -> Features -> MCP Servers -> + Add
+
+Select Type: command and paste the below, using your API key from Adjust
+```
+npx -y @smithery/cli@latest run @bitscorp/mcp-ffmpeg
 ```
 
 ## Using with Claude Desktop
