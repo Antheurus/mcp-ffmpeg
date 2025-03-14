@@ -1,5 +1,7 @@
 # MCP FFmpeg Video Processor
 
+[![smithery badge](https://smithery.ai/badge/@bitscorp-mcp/mcp-ffmpeg)](https://smithery.ai/server/@bitscorp-mcp/mcp-ffmpeg)
+
 A Node.js server that uses FFmpeg to manipulate video files. This server provides APIs to:
 
 - Resize videos to different resolutions (360p, 480p, 720p, 1080p)
@@ -41,6 +43,14 @@ cd mcp-ffmpeg
 2. Install dependencies:
 ```bash
 npm install
+```
+
+### Installing via Smithery
+
+To install mcp-ffmpeg for Claude Desktop automatically via [Smithery](https://smithery.ai/server/@bitscorp-mcp/mcp-ffmpeg):
+
+```bash
+npx -y @smithery/cli install @bitscorp-mcp/mcp-ffmpeg --client claude
 ```
 
 ## Running the Server
