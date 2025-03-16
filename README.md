@@ -1,8 +1,6 @@
 # MCP FFmpeg Video Processor
 [![smithery badge](https://smithery.ai/badge/@bitscorp-mcp/mcp-ffmpeg)](https://smithery.ai/server/@bitscorp-mcp/mcp-ffmpeg)
 
-[![smithery badge](https://smithery.ai/badge/@bitscorp-mcp/mcp-ffmpeg)](https://smithery.ai/server/@bitscorp-mcp/mcp-ffmpeg)
-
 A Node.js server that uses FFmpeg to manipulate video files. This server provides APIs to:
 
 - Resize videos to different resolutions (360p, 480p, 720p, 1080p)
